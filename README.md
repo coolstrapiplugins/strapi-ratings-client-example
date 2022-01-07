@@ -12,6 +12,6 @@ Additionally, you must enable the permissions to access the endpoints. More info
 
 To get up and running just install the dependencies with the command `npm install` and then run the server with `npm run dev` and open up your browser at http://localhost:3000.
 
-[Homepage](homepage.PNG)
+![Homepage](homepage.PNG)
 
-[Post page](post.PNG)
+![Post page](post.PNG)
