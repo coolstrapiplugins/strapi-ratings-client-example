@@ -34,8 +34,8 @@ function App() {
     const postsJSX = postsData.map(p => {
       return (
         <div className="p-4 my-3 border rounded" key={p.contentID}>
-          <h1><Link to={"/"+p.contentID}>{p.contentID}</Link></h1>
-          <p>{(p.reviewsCount !== undefined) ? p.reviewsCount + " reviews" : "Loading reviews..."}</p>
+          <h5><Link to={"/"+p.contentID}>{p.contentID}</Link></h5>
+          <p className="mb-0">{(p.reviewsCount !== undefined) ? p.reviewsCount + " reviews" : "Loading reviews..."}</p>
         </div>
       )
     })
