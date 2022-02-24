@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react"
 import { Link } from "react-router-dom";
+import { ReviewStats } from "strapi-ratings-client"
 
 import Login from "./components/Login"
 import AuthContext from "./context/AuthContext"
@@ -35,7 +36,7 @@ function App() {
       return (
         <div className="p-4 my-3 border rounded" key={p.contentID}>
           <h5><Link to={"/"+p.contentID}>{p.contentID}</Link></h5>
-          <p className="mb-0">{(p.reviewsCount !== undefined) ? p.reviewsCount + " reviews" : "Loading reviews..."}</p>
+          <ReviewStats apiURL={STRAPI} slug={p.contentID} />
         </div>
       )
     })
